@@ -9,6 +9,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+/[Aa]ssets/MonsterMutant 7/Texture/*
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
@@ -58,3 +59,7 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+Assets/MonsterMutant 7/Texture/textures skin4 body v2.meta
+Assets/MonsterMutant 7/Texture/textures skin3 body v2.meta
+Assets/MonsterMutant 7/Texture/textures skin2 body v2.meta
+Assets/MonsterMutant 7/Texture/textures skin1 body v2.meta
