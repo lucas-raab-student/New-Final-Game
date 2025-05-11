@@ -10,25 +10,40 @@ public class EnemyChase : MonoBehaviour
     public float stopChasingDistance = 15f;
     private NavMeshAgent agent;
     public bool isChasing;
-    // Start is called before the first frame update
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+       void Update()
+{
+    float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
+    if (isChasing)
+    {
+        if (distanceToPlayer > stopChasingDistance)
+        {
+            isChasing = false;
+            agent.ResetPath(); // Stop moving
+        }
+        else
+        {
+            // ✅ Update destination every frame while chasing
+            agent.SetDestination(player.position);
+        }
+    }
+    else
+    {
         if (distanceToPlayer <= detectionRange)
         {
             isChasing = true;
             agent.SetDestination(player.position);
+        }
+    }
+}
 
-        }
-        else
-        {
-            isChasing = false;
-        }
     }
 }
