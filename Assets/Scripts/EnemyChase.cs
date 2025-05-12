@@ -18,7 +18,6 @@ public class EnemyChase : MonoBehaviour
 
     void Update()
     {
-       void Update()
 {
     float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
@@ -27,11 +26,10 @@ public class EnemyChase : MonoBehaviour
         if (distanceToPlayer > stopChasingDistance)
         {
             isChasing = false;
-            agent.ResetPath(); // Stop moving
+            agent.ResetPath();
         }
         else
         {
-            // ✅ Update destination every frame while chasing
             agent.SetDestination(player.position);
         }
     }
