@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,8 +12,9 @@ public class GameManager : MonoBehaviour
     public  int CollectiblesCollected;
     public int totalCollectibles;
     public GameObject door;
-  
-        void Awake()
+    public Text collectibleText; // Reference to the UI text
+
+    void Awake()
         {
             // If there's already an instance, destroy this one
             if (Instance != null && Instance != this)
@@ -48,6 +50,11 @@ public class GameManager : MonoBehaviour
           
                 ShowDoor();
             
+        }
+        // Update UI text
+        if (collectibleText != null)
+        {
+            collectibleText.text = $"Collected: {CollectiblesCollected} / {totalCollectibles}";
         }
     }
     void ShowDoor()
