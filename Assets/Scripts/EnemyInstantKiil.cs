@@ -23,7 +23,7 @@ public class EnemyInstantKill : MonoBehaviour
                 animator.SetTrigger("Hit");
             }
 
-            playerHealth.TakeDamage(1);
+            playerHealth.TakeDamage(999);
         }
     }
 
