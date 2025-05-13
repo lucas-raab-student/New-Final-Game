@@ -2052,6 +2052,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d4f941f39d6b24fa723c1534ebf1f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpscareImage: {fileID: 0}
+  screamAudio: {fileID: 0}
 --- !u!114 &723429087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3970,6 +3972,7 @@ MonoBehaviour:
   CollectiblesCollected: 0
   totalCollectibles: 3
   door: {fileID: 2112114515}
+  collectibleText: {fileID: 1544829998}
 --- !u!4 &1481222691
 Transform:
   m_ObjectHideFlags: 0
