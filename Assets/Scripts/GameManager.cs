@@ -54,7 +54,9 @@ public class GameManager : MonoBehaviour
         // Update UI text
         if (collectibleText != null)
         {
+
             collectibleText.text = $"Collected: {CollectiblesCollected} / {totalCollectibles}";
+
         }
     }
     void ShowDoor()
