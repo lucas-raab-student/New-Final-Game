@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -26,13 +26,15 @@ public class EnemyJumpscare : MonoBehaviour
         jumpscareImage.SetActive(true);
         jumpscareSound.Play();
 
-        // Optional: disable player movement here
-        if (player.TryGetComponent(out MonoBehaviour controller))
-            controller.enabled = false;
+        FirstPersonCamera movement = player.GetComponent<FirstPersonCamera>();
+        if (movement != null)
+        {
+            movement.enabled = false;
+        }
 
         yield return new WaitForSeconds(displayTime);
 
-        // Load Main Menu (by name or index)
-        //SceneManager.LoadScene("MainMenu");  // Or use SceneManager.LoadScene(0);
+        // Load main menu
+        //SceneManager.LoadScene("MainMenu");
     }
 }

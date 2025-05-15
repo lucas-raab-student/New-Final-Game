@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour
     public float wanderRadius = 10f;
     public float waitTimeAtPoint = 2f; // Optional wait time
     private float waitTimer;
+    public float Speed = 5f;
 
     private bool waiting = false;
     private float distanceThreshold = 0.5f;
