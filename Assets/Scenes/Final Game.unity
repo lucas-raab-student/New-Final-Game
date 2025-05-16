@@ -1262,6 +1262,10 @@ PrefabInstance:
       propertyPath: PickupEffect
       value: 
       objectReference: {fileID: 6441873369525384307, guid: 0f3d407feb92ebb49b98d0157de5008a, type: 3}
+    - target: {fileID: 2829350574085545074, guid: d6368830071ce2f46ada92909a2e7072, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e9dd1c2f00b2d184fb12ee99ed6ffda7, type: 2}
     - target: {fileID: 3266317052261839856, guid: d6368830071ce2f46ada92909a2e7072, type: 3}
       propertyPath: m_Name
       value: Orb (2)
@@ -1276,7 +1280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5159994563191965889, guid: d6368830071ce2f46ada92909a2e7072, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.659
       objectReference: {fileID: 0}
     - target: {fileID: 5159994563191965889, guid: d6368830071ce2f46ada92909a2e7072, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5649,6 +5653,10 @@ PrefabInstance:
       propertyPath: PickupEffect
       value: 
       objectReference: {fileID: 6441873369525384307, guid: 0f3d407feb92ebb49b98d0157de5008a, type: 3}
+    - target: {fileID: 2829350574085545074, guid: d6368830071ce2f46ada92909a2e7072, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e9dd1c2f00b2d184fb12ee99ed6ffda7, type: 2}
     - target: {fileID: 3266317052261839856, guid: d6368830071ce2f46ada92909a2e7072, type: 3}
       propertyPath: m_Name
       value: Orb (1)
