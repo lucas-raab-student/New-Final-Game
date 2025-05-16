@@ -10,56 +10,82 @@ public class CharactsdMovement : MonoBehaviour
     private Vector3 MoveDirection;
     private StaminaSystem staminaSystem;
 
-    // Start is called before the first frame update
+    // Footstep sound variables
+   public AudioSource audioSource;
+public float footstepDelay = 0.5f;
+private float footstepTimer = 1f;
+
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         staminaSystem = GetComponent<StaminaSystem>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Detect input for movement
-        float forwardInput = Input.GetAxis("Vertical");  // W/S or Arrow Up/Down
-        float rightInput = Input.GetAxis("Horizontal");  // A/D or Arrow Left/Right
+        float forwardInput = Input.GetAxis("Vertical");
+        float rightInput = Input.GetAxis("Horizontal");
 
-
-        // Add movement input (calculated in the method below)
         AddMoveInput(forwardInput, rightInput);
 
-        // Check if the player is holding down shift (to run)
-        bool isRunning = Input.GetKey(KeyCode.LeftShift)&& staminaSystem.UseStamina(20f*Time.deltaTime);
+        bool isRunning = Input.GetKey(KeyCode.LeftShift) && staminaSystem.UseStamina(20f * Time.deltaTime);
 
-      
-
-        // Set the speed based on whether we're running or walking
         float currentSpeed = isRunning ? runSpeed : MoveSpeed;
 
-        // Normalize direction and apply gravity
         MoveDirection.Normalize();
-        MoveDirection.y = -1f;  // Apply gravity to keep the player grounded
+        MoveDirection.y = -1f;
 
-        // Move the character using CharacterController
         characterController.Move(MoveDirection * currentSpeed * Time.deltaTime);
+
+        HandleWalkingSound();
+
+
     }
 
-    // Method to calculate movement direction based on input
-    public void AddMoveInput(float forwardInput, float rightInput)
+public void AddMoveInput(float forwardInput, float rightInput)
+{
+    if (forwardInput == 0f && rightInput == 0f)
     {
-        // Get the direction based on the camera
-        Vector3 forward = Camera.main.transform.forward;
-        Vector3 right = Camera.main.transform.right;
-
-        // Zero out the y-axis so the character only moves on the x/z plane
-        forward.y = 0f;
-        right.y = 0f;
-
-        // Normalize the directions to prevent faster diagonal movement
-        forward.Normalize();
-        right.Normalize();
-
-        // Calculate movement direction based on user input and camera orientation
-        MoveDirection = (forwardInput * forward) + (rightInput * right);
+        MoveDirection = Vector3.zero;
+        return;
     }
+
+    Vector3 forward = Camera.main.transform.forward;
+    Vector3 right = Camera.main.transform.right;
+
+    forward.y = 0f;
+    right.y = 0f;
+
+    forward.Normalize();
+    right.Normalize();
+
+    MoveDirection = (forwardInput * forward) + (rightInput * right);
+}
+
+
+void HandleWalkingSound()
+{
+    bool isGrounded = characterController.isGrounded;
+    bool isMoving = MoveDirection.magnitude <1f;
+
+    if (isGrounded && isMoving)
+    {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
+    }
+    else
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+    }
+}
+
+
+
+   
 }

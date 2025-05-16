@@ -24,6 +24,7 @@ public class EnemyJumpscare : MonoBehaviour
     private IEnumerator TriggerJumpscare()
     {
         jumpscareImage.SetActive(true);
+        jumpscareSound.time=1f;
         jumpscareSound.Play();
 
         FirstPersonCamera movement = player.GetComponent<FirstPersonCamera>();
