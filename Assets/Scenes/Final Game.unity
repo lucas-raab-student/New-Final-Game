@@ -524,15 +524,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 0.033
+  m_audioClip: {fileID: 8300000, guid: e36ee4aa9f215f346ac97bc3a8c6b5a0, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.645
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 256
+  Priority: 250
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -3285,8 +3285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wanderRadius: 10
-  waitTimeAtPoint: 2
-  Speed: 10
+  waitTimeAtPoint: 1
+  Speed: 20
   navMeshLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295

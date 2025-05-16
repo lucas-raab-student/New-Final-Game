@@ -67,7 +67,7 @@ public void AddMoveInput(float forwardInput, float rightInput)
 void HandleWalkingSound()
 {
     bool isGrounded = characterController.isGrounded;
-    bool isMoving = MoveDirection.magnitude <1f;
+    bool isMoving = MoveDirection.magnitude >1f;
 
     if (isGrounded && isMoving)
     {

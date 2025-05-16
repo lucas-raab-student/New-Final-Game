@@ -60,28 +60,20 @@ public AudioSource Collectiblesound;
 
         }
     }
-    void ShowDoor()
-    {
-        // Make the door visible (or active)
-        if (door != null)
+ 
+        void ShowDoor()
         {
-            door.SetActive(true); // Shows the door if it was hidden
-            Debug.Log("✅ Door set active!");
-
+            if (door != null)
+            {
+                door.SetActive(true); // Make door visible/interactable
+                Debug.Log("The door has appeared!");
+            }
         }
 
-        // Optional: Play a sound or show a message here
-        Debug.Log("The door has appeared!");
 
-        // Call the win game function (if you want to load a new scene after this)
-        //WinGame();
-    }
-    //void WinGame()
-    //{
-        /// SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-       /// Debug.Log("You win");
-        // Trigger win condition here
-   // }
+
+    
+ 
 
 }
 
