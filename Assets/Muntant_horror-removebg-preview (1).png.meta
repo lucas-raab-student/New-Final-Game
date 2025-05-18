@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4904272df93b988438f91cb914c4ca0e
+guid: 91d81c09c7f319d4ebe26b3a2875d1f8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -95,7 +95,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Muntant_horror-removebg-preview_0
+      name: Muntant_horror-removebg-preview (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -109,8 +109,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8faf611e8cb25554491065b0d70f4c7e
-      internalID: -1644167991
+      spriteID: 172688f6f732e9841bec28d4dc38f994
+      internalID: 1490508194
       vertices: []
       indices: 
       edges: []
@@ -118,7 +118,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 506955bf20529cc47b39aceb7526127b
+    spriteID: 893688f70729c1049acc7d9e379f3416
     internalID: 0
     vertices: []
     indices: 
@@ -126,7 +126,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Muntant_horror-removebg-preview_0: -1644167991
+      Muntant_horror-removebg-preview (1)_0: 1490508194
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
