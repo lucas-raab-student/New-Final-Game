@@ -1,4 +1,4 @@
-﻿using JetBrains.Annotations;
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -60,20 +60,27 @@ public AudioSource Collectiblesound;
 
         }
     }
- 
-        void ShowDoor()
+    void ShowDoor()
+    {
+        // Make the door visible (or active)
+        if (door != null)
         {
-            if (door != null)
-            {
-                door.SetActive(true); // Make door visible/interactable
-                Debug.Log("The door has appeared!");
-            }
+            door.SetActive(true); // Shows the door if it was hidden
+
         }
 
+        // Optional: Play a sound or show a message here
+        Debug.Log("The door has appeared!");
 
-
-    
- 
+        // Call the win game function (if you want to load a new scene after this)
+        //WinGame();
+    }
+    //void WinGame()
+    //{
+        /// SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+       /// Debug.Log("You win");
+        // Trigger win condition here
+   // }
 
 }
 

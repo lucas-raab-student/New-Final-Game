@@ -36,6 +36,6 @@ public class EnemyJumpscare : MonoBehaviour
         yield return new WaitForSeconds(displayTime);
 
         // Load main menu
-        SceneManager.LoadScene("Final Game");
+        SceneManager.LoadScene("Death Game");
     }
 }
