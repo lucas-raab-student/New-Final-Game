@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     public int totalCollectibles;
     public GameObject door;
     public Text collectibleText; // Reference to the UI text
-public AudioSource Collectiblesound;
     void Awake()
         {
             // If there's already an instance, destroy this one
@@ -41,16 +40,8 @@ public AudioSource Collectiblesound;
     public void Collect()
     {
         CollectiblesCollected++;
-        if (Collectiblesound != null)
-        {
-            Collectiblesound.time = 0.8f;
-            Collectiblesound.Play();
-        }
-        else
-        {
-            Debug.LogWarning("AudioSource was destroyed before Collect() was called.");
-        }
 
+        AudioManager.Instance.PlayCollectSound();
         Debug.Log($"Collected: {CollectiblesCollected}/{totalCollectibles}");
 
         if (CollectiblesCollected == totalCollectibles)
