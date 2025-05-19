@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7604928504947133788}
   - component: {fileID: 2829350574085545074}
   - component: {fileID: 8163157107679402107}
-  - component: {fileID: -8104392430515703000}
+  - component: {fileID: 5659037997164110020}
   m_Layer: 0
   m_Name: Orb
   m_TagString: Untagged
@@ -106,7 +106,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-8104392430515703000
+--- !u!114 &5659037997164110020
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,4 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13241c4549eeb248b389899c7371d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickupEffect: {fileID: 3266317052261839856}
+  PickupEffect: {fileID: 0}
+  CollectiblesCollected: 0
+  totalCollectibles: 0
+  door: {fileID: 0}
+  collectibleText: {fileID: 0}

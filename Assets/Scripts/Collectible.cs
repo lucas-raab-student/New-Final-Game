@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    public GameObject PickupEffect;
+    public GameObject PickupEffect;  // Pickup effect (e.g., particle system)
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
+    // This method is called when the player collects the item
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -26,10 +20,10 @@ public class Collectible : MonoBehaviour
                 Instantiate(PickupEffect, transform.position, Quaternion.identity);
             }
 
-            // Inform the GameManager that a collectible was picked up
-            GameManager.Instance.Collect();
+            // Notify the CollectibleManager that this collectible was picked up
+            CollectibleManager.Instance.CollectItem();
 
-            // Destroy the collectible object
+            // Destroy this collectible object
             Destroy(gameObject);
         }
     }

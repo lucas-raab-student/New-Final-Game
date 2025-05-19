@@ -9,10 +9,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public  int CollectiblesCollected;
-    public int totalCollectibles;
-    public GameObject door;
-    public Text collectibleText; // Reference to the UI text
+  
     void Awake()
         {
             // If there's already an instance, destroy this one
@@ -37,49 +34,7 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
-    public void Collect()
-    {
-        CollectiblesCollected++;
-
-        AudioManager.Instance.PlayCollectSound();
-        Debug.Log($"Collected: {CollectiblesCollected}/{totalCollectibles}");
-
-        if (CollectiblesCollected == totalCollectibles)
-        {
-
-          
-                ShowDoor();
-            
-        }
-        // Update UI text
-        if (collectibleText != null)
-        {
-
-            collectibleText.text = $"Collected: {CollectiblesCollected} / {totalCollectibles}";
-
-        }
-    }
-    void ShowDoor()
-    {
-        // Make the door visible (or active)
-        if (door != null)
-        {
-            door.SetActive(true); // Shows the door if it was hidden
-
-        }
-
-        // Optional: Play a sound or show a message here
-        Debug.Log("The door has appeared!");
-
-        // Call the win game function (if you want to load a new scene after this)
-        //WinGame();
-    }
-    //void WinGame()
-    //{
-        /// SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-       /// Debug.Log("You win");
-        // Trigger win condition here
-   // }
+   
 
 }
 
