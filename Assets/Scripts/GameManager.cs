@@ -41,8 +41,16 @@ public AudioSource Collectiblesound;
     public void Collect()
     {
         CollectiblesCollected++;
-        Collectiblesound.time = 0.8f; 
-       Collectiblesound.Play();
+        if (Collectiblesound != null)
+        {
+            Collectiblesound.time = 0.8f;
+            Collectiblesound.Play();
+        }
+        else
+        {
+            Debug.LogWarning("AudioSource was destroyed before Collect() was called.");
+        }
+
         Debug.Log($"Collected: {CollectiblesCollected}/{totalCollectibles}");
 
         if (CollectiblesCollected == totalCollectibles)
