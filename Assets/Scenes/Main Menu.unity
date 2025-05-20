@@ -149,10 +149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434243f8b37c6ca4cac2c6d34bd44777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollectiblesCollected: 0
-  totalCollectibles: 0
-  door: {fileID: 0}
-  collectibleText: {fileID: 0}
 --- !u!4 &244599837
 Transform:
   m_ObjectHideFlags: 0
@@ -204,7 +200,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350.9, y: -415.9}
+  m_AnchoredPosition: {x: -357.8, y: -195}
   m_SizeDelta: {x: 479.1, y: 424.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &554610294
@@ -327,7 +323,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773057948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 134.9}
+  m_LocalPosition: {x: 0, y: 0, z: 4.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -335,8 +331,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -21.73, y: -272.45}
-  m_SizeDelta: {x: 1027.5, y: 1122.3}
+  m_AnchoredPosition: {x: -25.6, y: -139.7}
+  m_SizeDelta: {x: 700, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &773057950
 MonoBehaviour:
@@ -629,9 +625,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3490026887102114920, guid: e0a2ae8d8ae1c1f4b83e337da0b6f6b4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1751221654}
-    - targetCorrespondingSourceObject: {fileID: 3490026887102114920, guid: e0a2ae8d8ae1c1f4b83e337da0b6f6b4, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1751221656}
   m_SourcePrefab: {fileID: 100100000, guid: e0a2ae8d8ae1c1f4b83e337da0b6f6b4, type: 3}
 --- !u!1 &989387630
@@ -670,7 +663,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 213.62, y: -415.9}
+  m_AnchoredPosition: {x: 186.9, y: -192.1}
   m_SizeDelta: {x: 479.1, y: 424.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &989387632
@@ -1271,7 +1264,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1730649022}
-  - component: {fileID: 1730649021}
   m_Layer: 0
   m_Name: AudioManger
   m_TagString: Untagged
@@ -1279,19 +1271,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1730649021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1730649020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eb17c4af238dcc4aa27b32fedfd1fee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collectiblesoundClip: {fileID: 8300000, guid: 57dcd4ddc9a68f34f9ba239cd3149ba0, type: 3}
 --- !u!4 &1730649022
 Transform:
   m_ObjectHideFlags: 0
@@ -1411,19 +1390,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 3490026887111630760, guid: e0a2ae8d8ae1c1f4b83e337da0b6f6b4, type: 3}
   m_PrefabInstance: {fileID: 978485648}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1751221654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751221651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1073a50e11f2fb9489d77a1ab3439ba9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monsterAnimator: {fileID: 1751221652}
 --- !u!114 &1751221656
 MonoBehaviour:
   m_ObjectHideFlags: 0

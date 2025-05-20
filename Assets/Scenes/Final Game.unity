@@ -6224,7 +6224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b7fd3793e541e428dd69d3508dd49b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollectiblesCollected: 2
+  CollectiblesCollected: 0
   totalCollectibles: 3
   door: {fileID: 2112114515}
   collectibleText: {fileID: 844919247}

@@ -248,8 +248,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -18.8, y: 223.45}
-  m_SizeDelta: {x: 800, y: 800}
+  m_AnchoredPosition: {x: -18.8, y: 85.5}
+  m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &582168019
 MonoBehaviour:
@@ -428,8 +428,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 322.35, y: -202.6}
-  m_SizeDelta: {x: 500, y: 500}
+  m_AnchoredPosition: {x: 224, y: -202.6}
+  m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &615376130
 MonoBehaviour:
@@ -560,8 +560,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -500, y: -183.6}
-  m_SizeDelta: {x: 500, y: 600}
+  m_AnchoredPosition: {x: -205.9, y: -187.8}
+  m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879548572
 MonoBehaviour:
@@ -754,11 +754,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434243f8b37c6ca4cac2c6d34bd44777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollectiblesCollected: 0
-  totalCollectibles: 0
-  door: {fileID: 0}
-  collectibleText: {fileID: 0}
-  Collectiblesound: {fileID: 0}
 --- !u!4 &1614595202
 Transform:
   m_ObjectHideFlags: 0
