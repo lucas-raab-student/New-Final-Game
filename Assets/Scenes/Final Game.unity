@@ -1201,16 +1201,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252881852}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -270.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.65528, y: 0.65528, z: 0.65528}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 844919246}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 847.35, y: -473.59998}
-  m_SizeDelta: {x: 1760, y: 1050}
+  m_AnchoredPosition: {x: 513.7346, y: -219.44948}
+  m_SizeDelta: {x: 2432.2693, y: 1558.2991}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &252881854
 MonoBehaviour:
@@ -2801,7 +2801,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716385048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 108.9}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.8229663, y: 2.8229663, z: 2.8229663}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2811,8 +2811,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -728.3, y: -507.2}
-  m_SizeDelta: {x: 154.30005, y: 26.400024}
+  m_AnchoredPosition: {x: -474.38, y: -206.2}
+  m_SizeDelta: {x: 50, y: 25.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &716385050
 MonoBehaviour:
@@ -3675,7 +3675,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844919245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 270.1}
+  m_LocalPosition: {x: 0, y: 0, z: 202.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3684,8 +3684,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -847.35, y: 473.6}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -519.9, y: 217.37}
+  m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &844919247
 MonoBehaviour:
@@ -3709,7 +3709,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 100
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0

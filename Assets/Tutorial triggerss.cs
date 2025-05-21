@@ -1,18 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Tutorialtriggerss : MonoBehaviour
 {
     public GameObject[] ObjectToActivate;
     public string triggertag = "Player";
+
     private void OnTriggerEnter(Collider other)
     {
-        if(string.IsNullOrEmpty(triggertag)|| other.CompareTag(triggertag))
+        if (string.IsNullOrEmpty(triggertag) || other.CompareTag(triggertag))
         {
-            Debug.Log("Player has enter zone");
-            foreach(GameObject obj in ObjectToActivate)
+            Debug.Log("Player ENTERED the zone");
+            foreach (GameObject obj in ObjectToActivate)
+            {
+                if (obj != null)
+                {
+                    obj.SetActive(true);
+                }
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (string.IsNullOrEmpty(triggertag) || other.CompareTag(triggertag))
+        {
+            Debug.Log("Player EXITED the zone");
+            foreach (GameObject obj in ObjectToActivate)
             {
                 if (obj != null)
                 {
@@ -20,6 +35,5 @@ public class Tutorialtriggerss : MonoBehaviour
                 }
             }
         }
-          
     }
 }

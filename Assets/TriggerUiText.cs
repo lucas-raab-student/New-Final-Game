@@ -1,50 +1,61 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics.Contracts;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI; // For UI Text
+using UnityEngine.UI;
 
 public class TriggerUiText : MonoBehaviour
 {
-    public Text messageText; //asing the ui insepctor
+    public Text messageText; // Assign this in the Inspector
     public string message;
     public string triggerTag = "Player";
     public float fadeDuration = 1f;
+
     private CanvasGroup canvasGroup;
 
     private void Start()
     {
-        // get the canavas groupm]  compnent 
-        canvasGroup = GetComponent<CanvasGroup>();
-        if (canvasGroup == null )
+        if (messageText == null)
         {
-            canvasGroup=messageText.gameObject.AddComponent<CanvasGroup>();
+            Debug.LogError("Message Text is not assigned in the Inspector.");
+            return;
         }
+
+        // Always get the CanvasGroup from the same GameObject as the messageText
+        canvasGroup = messageText.GetComponent<CanvasGroup>();
+        if (canvasGroup == null)
+        {
+            canvasGroup = messageText.gameObject.AddComponent<CanvasGroup>();
+        }
+
         canvasGroup.alpha = 0f;
         messageText.gameObject.SetActive(false);
     }
-    void OnTriggerEnter(Collider other)
+
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(triggerTag) && messageText != null)
-        { 
+        {
             messageText.text = message;
             messageText.gameObject.SetActive(true);
             StartCoroutine(FadeIn());
-
         }
-
     }
+
     private void OnTriggerExit(Collider other)
     {
-        if(other.CompareTag(triggerTag) && canvasGroup!=null)
+        if (other.CompareTag(triggerTag) && canvasGroup != null)
         {
             StartCoroutine(FadeOut());
-
         }
     }
+
     private IEnumerator FadeIn()
     {
+        if (canvasGroup == null)
+        {
+            Debug.LogError("CanvasGroup is null in FadeIn()");
+            yield break;
+        }
+
         float timeElapsed = 0f;
         while (timeElapsed < fadeDuration)
         {
@@ -52,12 +63,17 @@ public class TriggerUiText : MonoBehaviour
             timeElapsed += Time.deltaTime;
             yield return null;
         }
-        canvasGroup.alpha = 1f; // Ensure fully visible at the end
+        canvasGroup.alpha = 1f;
     }
 
-    // Fade-out transition
     private IEnumerator FadeOut()
     {
+        if (canvasGroup == null)
+        {
+            Debug.LogError("CanvasGroup is null in FadeOut()");
+            yield break;
+        }
+
         float timeElapsed = 0f;
         while (timeElapsed < fadeDuration)
         {
@@ -65,9 +81,7 @@ public class TriggerUiText : MonoBehaviour
             timeElapsed += Time.deltaTime;
             yield return null;
         }
-        canvasGroup.alpha = 0f; // Ensure fully invisible at the end
-        messageText.gameObject.SetActive(false); // Optionally hide message after fade
+        canvasGroup.alpha = 0f;
+        messageText.gameObject.SetActive(false);
     }
 }
-
-

@@ -119,7 +119,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PickupEffect: {fileID: 0}
-  CollectiblesCollected: 0
-  totalCollectibles: 0
-  door: {fileID: 0}
-  collectibleText: {fileID: 0}

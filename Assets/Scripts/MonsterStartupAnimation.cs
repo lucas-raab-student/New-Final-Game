@@ -16,6 +16,10 @@ public class MonsterStartupAnimation : MonoBehaviour
         {
             animator.Play("idle1");
         }
+        else if (sceneName == "Tutorial")
+        {
+            animator.Play("idle1");
+        }
         else
         {
             animator.Play("walk2"); // or whatever the movement state is
