@@ -504,7 +504,7 @@ Transform:
   m_GameObject: {fileID: 239447765}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.121437, y: -223.47499, z: -48.675186}
+  m_LocalPosition: {x: -29.121437, y: -223.47499, z: -63.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -737,8 +737,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messageText: {fileID: 676731825}
-  message: These items will help you escape and defeat the fearsome monster. Be sure
-    to collect them all!
+  message: "Gather every last collectible... it's the only way to make the door appear.
+    Then click \u2014 and step into whatever waits in the next room"
   triggerTag: Player
   fadeDuration: 1
 --- !u!4 &309194663
@@ -816,7 +816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6073482350489701635, guid: 43fd4b80358d2ce418bbab41f5ae9e38, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.579
+      value: -21.819002
       objectReference: {fileID: 0}
     - target: {fileID: 6073482350489701635, guid: 43fd4b80358d2ce418bbab41f5ae9e38, type: 3}
       propertyPath: m_LocalRotation.w
@@ -876,7 +876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6073482350489701635, guid: 43fd4b80358d2ce418bbab41f5ae9e38, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.71
+      value: -21.95
       objectReference: {fileID: 0}
     - target: {fileID: 6073482350489701635, guid: 43fd4b80358d2ce418bbab41f5ae9e38, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1486,8 +1486,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 38.1, y: -100.01499}
-  m_SizeDelta: {x: 500, y: -187.37}
+  m_AnchoredPosition: {x: 38.1, y: -10.315001}
+  m_SizeDelta: {x: 500, y: -7.970001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &676731825
 MonoBehaviour:
@@ -1946,7 +1946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messageText: {fileID: 676731825}
-  message: ' use wasd to move and press shift to run'
+  message: ' use wasd to move'
   triggerTag: Player
   fadeDuration: 1
 --- !u!1 &825813194 stripped
@@ -3407,7 +3407,7 @@ Transform:
   m_GameObject: {fileID: 1401956179}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.9, y: 1.5900002, z: 7.04}
+  m_LocalPosition: {x: -25.9, y: 1.5900002, z: -3.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4303,7 +4303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messageText: {fileID: 676731825}
-  message: 'Welcome to Mutated Horror use '
+  message: 'Welcome to Mutated Horror '
   triggerTag: Player
   fadeDuration: 1
 --- !u!65 &1749577447

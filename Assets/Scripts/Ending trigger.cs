@@ -15,7 +15,7 @@ public class Endingtrigger : MonoBehaviour
     {
         if (other.CompareTag(triggerTag))
         {
-            SceneManager.LoadScene("Main Menu");
+            SceneManager.LoadScene("Thank You");
         }
     }
 }
